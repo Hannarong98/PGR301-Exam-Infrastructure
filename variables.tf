@@ -24,9 +24,9 @@ variable "service_runner" {
 }
 
 variable "logz_token" {
-
+  description = "Token for logz.io"
 }
 
 variable "logz_url" {
-
+  description = "Listener url for logz.io"
 }
