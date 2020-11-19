@@ -2,6 +2,10 @@ variable "logz_token" {
 
 }
 
+variable "logz_url" {
+
+}
+
 variable "project_id" {
   description = "Id of the project"
   type = string

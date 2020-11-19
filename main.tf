@@ -11,6 +11,10 @@ resource "google_cloud_run_service" "pgr301-exam" {
           name = "LOGZ_TOKEN"
           value = var.logz_token
         }
+        env {
+          name = "LOGZ_URL"
+          value = var.logz_url
+        }
       }
     }
   }
