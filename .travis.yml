@@ -23,5 +23,13 @@ before_install:
   - sudo mv terraform /usr/local/bin/
   - rm terraform_"$tf_version"_linux_amd64.zip
 install: true
-after_success:
-  - ./deploy.sh
+script:
+  - |-
+  set -ex
+  export TF_VAR_logz_token=$LOGZ_TOKEN
+  export TF_VAR_logz_url=$LOGZ_URL
+  terraform init
+  terraform plan
+  terraform apply --auto-approve
+  terraform output
+  set +x
