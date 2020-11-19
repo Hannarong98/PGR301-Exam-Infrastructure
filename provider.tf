@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket = var.bucket_name
-    prefix = var.bucket_directory_prefix
+    bucket = "pgr301-exam-bucket-57dy7x52hm"
+    prefix = "terraform/state"
     credentials = "terraform-credentials.json"
   }
 }
