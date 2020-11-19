@@ -23,3 +23,9 @@ variable "deploy_region" {
   type = string
   default = "us-central1"
 }
+
+variable "bucket_name" {
+  description = "Name of the bucket"
+  type = string
+  default = "pgr301-exam-terraform-bucket"
+}
