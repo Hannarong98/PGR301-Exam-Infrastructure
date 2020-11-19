@@ -1,5 +1,5 @@
 resource "google_cloud_run_service" "pgr301-exam" {
-  name = var.image_name
+  name = var.service_runner
   location = var.deploy_region
   project = var.project_id
 
