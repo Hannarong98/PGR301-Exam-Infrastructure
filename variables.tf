@@ -1,7 +1,7 @@
 variable "bucket_name" {
   description = "Name of the bucket"
   type = string
-  default = "pgr301-exam-terraform-bucket"
+  default = "pgr301-exam-bucket"
 }
 
 
