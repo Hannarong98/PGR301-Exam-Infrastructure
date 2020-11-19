@@ -1,7 +1,7 @@
 resource "google_cloud_run_service" "pgr301-exam" {
-  name = var.service_runner
-  location = var.deploy_region
-  project = var.project_id
+  name = "cloud-run-srv"
+  location = "us-central1"
+  project = "pgr301-exam-hannarong"
 
   template {
     spec {
