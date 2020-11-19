@@ -1,12 +1,12 @@
-resource "google_cloud_run_service" "hello" {
-  name = "helloworld-service"
-  location = "us-central1"
+resource "google_cloud_run_service" "pgr301-exam" {
+  name = var.image_name
+  location = var.deploy_region
   project = var.project_id
 
   template {
     spec {
       containers {
-        image = "gcr.io/terraform-292215/helloworld@sha256:0ee92532317e87faadbe0231986e827605d1d97cbf9acd9c44557f49a416867d"
+        image = "gcr.io/pgr301-exam-hannarong/examapp@sha256:9882de0fdfa48142e282a7faded8f825b83701210f79459b25a4dc5f437d2fd0"
         env {
           name = "LOGZ_TOKEN"
           value = var.logz_token
@@ -31,8 +31,8 @@ data "google_iam_policy" "noauth" {
 }
 
 resource "google_cloud_run_service_iam_policy" "noauth" {
-  location = google_cloud_run_service.hello.location
-  project = google_cloud_run_service.hello.project
-  service = google_cloud_run_service.hello.name
+  location = google_cloud_run_service.pgr301-exam.location
+  project = google_cloud_run_service.pgr301-exam.project
+  service = google_cloud_run_service.pgr301-exam.name
   policy_data = data.google_iam_policy.noauth.policy_data
 }
