@@ -3,7 +3,7 @@ language: generic
 env:
   global:
     - GCP_PROJECT_ID=pgr301-exam-hannarong
-    - tf_version=0.13.5
+    - tf_version=0.13.4
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
     - secure: O47qvQbeBK05oP0K9GmwvoUw1ItTXDB2YeCZZxr5k3sVOpbr+Ok6zZfr+Hsc9xz4pMNrxdQc88yInKBli+5dt6GRyEzr0D/+9lFhuc8lNND789m76CEEUgFWbhOK+9NNu0+wPZqZEekt6O8aUPsqSwNaAjA2QVBfbbz7ZrBxVTsrso2NjfLVvYHG5r1OH8pvh7FGP1QZu4gDZltZHNyCyc/WW2rNKsT++ZMGTbpX1uwT+/IKgJivVkDa2VwWFSgN3ulzkOlKDOSVeYHcJFWnzo9K35GOpEAXcAALAbi+W49X0MLeMnKKeJBVacC0+KvNRu0VcNHWv1Ols0gvc1deY7hxBrmZkfn5f70bw9dh2k9Ahj0f7FBjh+JeFHPRQ+AG8ePn+yTw+D8rGDOli1s9W9X3RkD66afKzjXNzDQ4SG+s4BUhPaVKxul+ERcKmGiDuNzA3eaQNqf/WweaQSvYf96+Kh0zln5IyDF33OteI7MvfBVreSjz1m3r0QD0NJXl0i7cRF7bv0LK9GNbiRDJNsdt0HRJEY4qSJZhW7V+UIGLQ89VgYAU+HOw9Td6vOxzAj4p0oPKxtbh+aCmZjzJnUxgLkPKXKVn5h6YJr1d3gIFxG7zF4FdJ/QQEjYehENqLZJEeoxlQ70Q0kSFpqBkSgZaV6pAy98MMnHuuj49eLk=
     - secure: B7GehDhuJ6i7OM63uG+sFqR6V+VG9k3qtB7+merwGKhyNqRDFWQT6sUg3QsvjL4aZiX5+MvVh/gZT2nEGyCuEqp653nKrs5WH4ZRLU1XudC6H5pPvPkyHTxonDKcZ5JD4CfYtOSx+ayB+vN5Uod9BVVRZ0QbdRjvVjJinEWsL7XAFq0p4pW4O5dv16w1t9oII6NeMGNbAhi4st+MJvVLd2AmgviSlB7BvyrDh2nejjwT7sKjLm6axSzHuSapWFQqu06MFnCnhMR64LBk1r+dvfpMzKsa+8VVJkHYgtdCgSTif8Tg42z1mxZuIj/nvqP+9aTS8I8odAhdq6S+vLriMQpvIh/ULV8LHcKC8Aw/HudAC5gWm7Ql3KNN2Z4IVemxX3kS7/6oUhrSdeuF8EePnWsDgs5eQSPo8t2JKlpjcUY26kY446xsdIxrCH3kf+WQol24pQvDkvYI+PqOB+vsBFJqpRjILOW3/TPC1BF26bkJfki8+ZFPpfkqnZ7GHB581pE4FeiFL+OH4/0OaABSeTM6XASSkz9kcSAJyE1fXdmxaxC5uf8xIyYT+zBQ2MJgw+n1R0DcbBtnRoHHe3EkJDzRaoD+tE7KtWESnxi4/9GrewcHy/bxn/NiGhwpfI7+jE8a39kRSkexOrjnACHJqCmtny1xvrq3+J1Oy4LMihc=
@@ -26,10 +26,8 @@ install: true
 script:
   - |-
     set -ex;
-    export STATUSCAKE_KEY=$(gcloud secrets versions access latest --secret=STATUSCAKE_APIKEY)
-    echo 'I might later use secret manager to set $STATUSCAKE_KEY'
-    echo $STATUSAKE_KEY
     export TF_VAR_logz_token=$LOGZ_TOKEN
+    export TF_VAR_logz_url=$LOGZ_URL
     terraform init
     terraform plan
     terraform apply --auto-approve
