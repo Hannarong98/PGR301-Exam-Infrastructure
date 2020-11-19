@@ -1,3 +1,5 @@
+language: generic
+
 env:
   global:
   - GCP_PROJECT_ID=pgr301-exam-hannarong
