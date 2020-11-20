@@ -15,6 +15,9 @@ resource "google_cloud_run_service" "pgr301-exam" {
           name = "LOGZ_URL"
           value = var.logz_url
         }
+        resources {
+          memory = "512Mi"
+        }
       }
     }
   }
