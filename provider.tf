@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "pgr301-exam-bucket-2991"
+    bucket = "pgr301-exam-bucket-2962023"
     prefix = "terraform/state"
     credentials = "terraform-credentials.json"
   }
