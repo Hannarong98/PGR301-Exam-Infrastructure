@@ -1,5 +1,5 @@
 resource "google_cloud_run_service" "pgr301-exam" {
-  name = "cloud-run-srv"
+  name = "cloud-run-srv-296202"
   location = "us-central1"
   project = "pgr301-exam-hannarong-296202"
 
