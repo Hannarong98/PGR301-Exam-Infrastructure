@@ -25,3 +25,15 @@ variable "logz_token" {
 variable "logz_url" {
   description = "Listener url for logz.io"
 }
+
+variable "status_cake_username" {
+  description = "Username for statuscake"
+}
+
+variable "status_cake_api_key" {
+  description = "Api key for statuscake"
+}
+
+variable "fake_secret" {
+  description = "testing before it shows on console"
+}
