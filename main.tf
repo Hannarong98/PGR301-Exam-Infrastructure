@@ -1,12 +1,12 @@
 resource "google_cloud_run_service" "pgr301-exam" {
   name = "cloud-run-srv"
   location = "us-central1"
-  project = "pgr301-exam-hannarong"
+  project = "pgr301-exam-hannarong-296202"
 
   template {
     spec {
       containers {
-        image = "gcr.io/pgr301-exam-hannarong/examapp@sha256:6b12b8f341798e76c0f8c0575ebd848d4327c924a3b0b563c86c0e011d6282fb"
+        image = "gcr.io/pgr301-exam-hannarong-296202/examapp@sha256:c99c10b2e573535047a8a04291e998e0980575c23be8970b84c3e481f98abeb3"
         env {
           name = "LOGZ_TOKEN"
           value = var.logz_token
