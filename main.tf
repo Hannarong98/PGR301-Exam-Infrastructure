@@ -6,7 +6,7 @@ resource "google_cloud_run_service" "pgr301-exam" {
   template {
     spec {
       containers {
-        image = "gcr.io/pgr301-exam-hannarong-296202/examapp@sha256:c99c10b2e573535047a8a04291e998e0980575c23be8970b84c3e481f98abeb3"
+        image = "gcr.io/pgr301-exam-hannarong-296202/examapp:89b67fa97224ed5341b02194456a77a50617dc9e"
         env {
           name = "LOGZ_TOKEN"
           value = var.logz_token
