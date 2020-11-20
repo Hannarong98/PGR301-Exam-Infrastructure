@@ -1,9 +1,3 @@
-variable "bucket_name" {
-  description = "Name of the bucket"
-  type = string
-  default = "pgr301-exam-bucket-57dy7x52hm"
-}
-
 variable "deploy_region" {
   description = "Region where the application should deploy"
   type = string

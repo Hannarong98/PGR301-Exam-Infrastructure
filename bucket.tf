@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "static-site" {
-  project = var.project_id
-  name = var.bucket_name
+  project = "pgr301-exam-hannarong"
+  name = "pgr301-exam-bucket-57dy7x52hm"
   location = "US"
 }
