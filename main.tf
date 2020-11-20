@@ -6,7 +6,7 @@ resource "google_cloud_run_service" "pgr301-exam" {
   template {
     spec {
       containers {
-        image = "gcr.io/pgr301-exam-hannarong-296202/examapp@sha256:60813abde875643760e1873674ecc615cf90b58cd5bf00f0ab775104a96bb109"
+        image = "gcr.io/pgr301-exam-hannarong-296202/examapp@sha256:1221f0013da88966268574b638fe2d1418d2bf063bb63c4f5c70b58d14824dd6"
         env {
           name = "LOGZ_TOKEN"
           value = var.logz_token
@@ -40,13 +40,13 @@ data "google_iam_policy" "noauth" {
   }
 }
 
-output "url" {
-  value = google_cloud_run_service.pgr301-exam.status[0].url
-}
-
 resource "google_cloud_run_service_iam_policy" "noauth" {
   location = google_cloud_run_service.pgr301-exam.location
   project = google_cloud_run_service.pgr301-exam.project
   service = google_cloud_run_service.pgr301-exam.name
   policy_data = data.google_iam_policy.noauth.policy_data
+}
+
+output "url" {
+  value = google_cloud_run_service.pgr301-exam.status[0].url
 }
