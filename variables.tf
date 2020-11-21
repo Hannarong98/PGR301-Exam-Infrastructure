@@ -16,12 +16,6 @@ variable "service_runner" {
   default = "cloud-run-srv-296202"
 }
 
-variable "unique_bucket_name" {
-  description = "Name of your bucket (must be globally unique)"
-  type = string
-  default = "pgr301-exam-bucket-2962023"
-}
-
 variable "status_cake_website_name" {
   description = "Name of your website"
   type = string
