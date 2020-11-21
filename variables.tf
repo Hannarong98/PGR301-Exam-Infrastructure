@@ -4,7 +4,6 @@ variable "deploy_region" {
   default = "us-central1"
 }
 
-
 variable "project_id" {
   description = "Id of the project"
   type = string
@@ -12,9 +11,33 @@ variable "project_id" {
 }
 
 variable "service_runner" {
-  description = "Name for the service runner"
+  description = "Name of the service runner"
   type = string
   default = "cloud-run-srv-296202"
+}
+
+variable "unique_bucket_name" {
+  description = "Name of your bucket (must be globally unique)"
+  type = string
+  default = "pgr301-exam-bucket-2962023"
+}
+
+variable "status_cake_website_name" {
+  description = "Name of your website"
+  type = string
+  default = "DimFlow"
+}
+
+variable "status_cake_check_rate" {
+  description = "Check rate frequency in seconds"
+  type = number
+  default = 300
+}
+
+variable "status_cake_contact_group" {
+  description = "Array of contact group id's adjust the tuple type comma separated for more group id's"
+  type = tuple([string])
+  default = ["195453"]
 }
 
 variable "logz_token" {
