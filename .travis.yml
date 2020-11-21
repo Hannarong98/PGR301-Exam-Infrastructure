@@ -27,7 +27,7 @@ script:
   set -ex;
   export TF_VAR_logz_token=$LOGZ_TOKEN
   export TF_VAR_logz_url=$LOGZ_URL
-  export TF_VAR_fake_secret=$(gcloud secrets version access latest --secret=TESTING_SECRET)
+  export TF_VAR_fake_secret=$(gcloud secrets versions access latest --secret=TESTING_SECRET)
   terraform init
   terraform plan
   terraform apply --auto-approve
