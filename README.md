@@ -11,14 +11,15 @@ Usage
 * `travis encrypt --pro STATUS_CAKE_API_KEY="YOUR_STATUS_CAKE_API_KEY" --add`
 
 
-#### Configuration
+#### Configurations
 
 * In `variables.tf` change these default values
     * `deploy_region`
     * `project_id`
     * `service_runner`
-    * `unique_bucket_name`
     * `status_cake_website_name`
     * `status_cake_check_rate`
     * `status_cake_contact_group`
+* In `provider.tf` change the following value
+    * `bucket`
 * Non mentioned fields are configured and encrypted at the `Encrypt secrets` step
