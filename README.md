@@ -1,4 +1,4 @@
-### PGR301-Exam-Infrastructure
+## PGR301-Exam-Infrastructure
 
 [![Build Status](https://travis-ci.com/Hannarong98/PGR301-Exam-Infrastructure.svg?token=DqMpxq41VWvgzW8Fy3oq&branch=master)](https://travis-ci.com/Hannarong98/PGR301-Exam-Infrastructure) <a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=5749379&Days=1&Design=3" /></a>
 
@@ -20,6 +20,6 @@ Usage
     * `status_cake_website_name`
     * `status_cake_check_rate`
     * `status_cake_contact_group`
-* In `provider.tf` change the following value
+* In `provider.tf` change the following field value
     * `bucket`
 * Non mentioned fields are configured and encrypted at the `Encrypt secrets` step
