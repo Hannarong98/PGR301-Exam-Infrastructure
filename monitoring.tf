@@ -1,4 +1,4 @@
-provider "statuscake" {
+provider "hashicorp/statuscake" {
   username = var.fake_secret
   apikey = var.fake_secret
 }
