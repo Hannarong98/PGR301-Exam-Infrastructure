@@ -3,8 +3,6 @@ provider "statuscake" {
   apikey = var.status_cake_api_key
 }
 
-
-
 resource "statuscake_test" "google" {
   test_type = "HTTP"
   website_name = "DimFlow"

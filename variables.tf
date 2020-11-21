@@ -1,4 +1,3 @@
-
 variable "deploy_region" {
   description = "Region where the application should deploy"
   type = string
@@ -9,13 +8,13 @@ variable "deploy_region" {
 variable "project_id" {
   description = "Id of the project"
   type = string
-  default = "pgr301-exam-hannarong"
+  default = "pgr301-exam-hannarong-296202"
 }
 
 variable "service_runner" {
   description = "Name for the service runner"
   type = string
-  default = "cloud_run_srv"
+  default = "cloud-run-srv-296202"
 }
 
 variable "logz_token" {
