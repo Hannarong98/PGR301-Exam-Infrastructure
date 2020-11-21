@@ -22,4 +22,6 @@ Usage
     * `status_cake_contact_group`
 * In `provider.tf` change the following field value
     * `bucket`
+* In `main.tf` you can change `google_cloud_run_service` resource name
+    * And then you have to change some values in `google_cloud_run_service_iam_policy` block
 * Non mentioned fields are configured and encrypted at the `Encrypt secrets` step
