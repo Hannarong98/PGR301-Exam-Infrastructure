@@ -34,6 +34,3 @@ variable "status_cake_api_key" {
   description = "Api key for statuscake"
 }
 
-variable "fake_secret" {
-  description = "testing before it shows on console"
-}
