@@ -45,6 +45,12 @@ Usage
     * And then you have to change some values in `google_cloud_run_service_iam_policy` block
 * Non mentioned fields are configured and encrypted at the `Encrypt secrets` step
 
+Deployment
+---
+* Once you have configured everything you will only need to change
+    * `image` in container block of `main.tf` for each new revision
+
+
 Links
 ---
 
