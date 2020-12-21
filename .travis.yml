@@ -33,6 +33,5 @@ script:
   export TF_VAR_status_cake_api_key=$STATUS_CAKE_API_KEY
   terraform init
   terraform plan
-  terraform destroy
   terraform apply --auto-approve
   terraform output
