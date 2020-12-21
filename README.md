@@ -1,3 +1,7 @@
+## Note:
+
+As of december 2020 I have removed the deployed project because my gcp trial expired
+
 ## PGR301-Exam-Infrastructure
 
 [![Build Status](https://travis-ci.com/Hannarong98/PGR301-Exam-Infrastructure.svg?token=DqMpxq41VWvgzW8Fy3oq&branch=master)](https://travis-ci.com/Hannarong98/PGR301-Exam-Infrastructure) <a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=5749379&Days=1&Design=3" /></a>
