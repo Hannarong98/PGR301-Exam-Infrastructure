@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Hannarong98/PGR301-Exam-Infrastructure.svg?branch=master)](https://travis-ci.com/Hannarong98/PGR301-Exam-Infrastructure)
+
 ## Note:
 
 As of december 2020 I have removed the deployed project because my gcp trial expired
