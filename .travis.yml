@@ -24,14 +24,14 @@ before_install:
 - sudo mv terraform /usr/local/bin/
 - rm terraform_"$tf_version"_linux_amd64.zip
 install: true
-script:
-- |-
-  set -ex;
-  export TF_VAR_logz_token=$LOGZ_TOKEN
-  export TF_VAR_logz_url=$LOGZ_URL
-  export TF_VAR_status_cake_username=$STATUS_CAKE_USERNAME
-  export TF_VAR_status_cake_api_key=$STATUS_CAKE_API_KEY
-  terraform init
-  terraform plan
-  terraform apply --auto-approve
-  terraform output
+# script:
+# - |-
+#  set -ex;
+#  export TF_VAR_logz_token=$LOGZ_TOKEN
+#  export TF_VAR_logz_url=$LOGZ_URL
+#  export TF_VAR_status_cake_username=$STATUS_CAKE_USERNAME
+#  export TF_VAR_status_cake_api_key=$STATUS_CAKE_API_KEY
+#  terraform init
+#  terraform plan
+#  terraform apply --auto-approve
+#  terraform output
